@@ -12,7 +12,7 @@ st.title("Simple Image Classification Application")
 st.write("")
 
 # enable users to upload images for the model to make predictions
-file_up = st.file_uploader("Upload an image", type = "jpg")
+file_up = st.file_uploader("Upload an image", type = ["jpg","png","jpeg"])
 st.sidebar.markdown("# Pleace Choose A Model To Classify An Image")
 model_dict = {'VGG16-bn':models.vgg16_bn,'VGG19-bn':models.vgg19_bn,
               'AlexNet':models.alexnet,'ResNet50':models.resnet50,
