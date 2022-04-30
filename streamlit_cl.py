@@ -42,10 +42,9 @@ def predict(image,model_name):
     # create a model
     # resnet = models.resnet101
     pre_model = model_dict[model_name](pretrained=True)
+    device = 'cuda' if torch.cuda.is_available else  'cpu'
 
     device = 'cpu'
-    if torch.cuda.is_available:
-        device = 'cuda'
     pre_model = pre_model.to(device)
     # transform the input image through resizing, normalization
     transform = transforms.Compose([
