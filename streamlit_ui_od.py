@@ -60,6 +60,7 @@ def predict(image):
     images = transform(img)*255.0;
     images = images.byte()
     result = draw_bounding_boxes(images, boxes=output_boxes, labels=output_labels, width=5)
+    print(result)
     st.image(result.permute(1,2,0).numpy(), caption = 'Processed Image.', use_column_width = True)
 
     return outputs
