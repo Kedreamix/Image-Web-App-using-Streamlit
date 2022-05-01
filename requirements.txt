@@ -4,3 +4,5 @@ torchvision==0.9.1
 Pillow==8.2.0
 tensorflow==2.1
 matplotlib
+pydot
+graphviz
